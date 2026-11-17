@@ -135,7 +135,7 @@ object NotificationParser {
 
         val isOutgoingTransfer = outgoingTerms.any(text::contains)
         if (isOutgoingTransfer) {
-            val source = detectLiquidAccount(pkg, text) ?: detectSourceAccount(text) ?: return null
+            val source = liquidAccountForPackage(pkg) ?: detectLiquidAccount(pkg, text) ?: detectSourceAccount(text) ?: return null
             val destination = detectDestinationAccount("", text)
             val isCardDestination = destination in setOf("Plata Card", "Banamex Oro", "BBVA Azul", "Mercado Pago Crédito", "Nu", "Klar", "Bradescard", "Openbank")
             return SpecialMovement(
