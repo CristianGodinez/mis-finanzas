@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mis Finanzas Demo</string>
+    <string name="notification_listener_name">Detección de movimientos</string>
+    <string name="quick_tile_label">Registrar movimiento</string>
+    <string name="quick_tile_description">Abrir el registro rápido de Mis Finanzas</string>
+</resources>
+
